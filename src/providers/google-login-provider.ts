@@ -43,8 +43,8 @@ export class GoogleLoginProvider extends BaseLoginProvider {
     user.name = profile.getName();
     user.email = profile.getEmail();
     user.image = profile.getImageUrl();
-    user.token = authResponseObj.access_token;
-    user.idToken = authResponseObj.id_token;
+    user.token = authResponseObj.id_token;
+    user.idToken = authResponseObj.access_token;
     return user;
   }
 
